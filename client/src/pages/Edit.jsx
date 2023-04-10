@@ -25,8 +25,6 @@ const Edit = () => {
     try {
       const res = await axiosPrivate.put(`/user/${id}/${role}`);
 
-      console.log(res);
-
       setUsers(users.map((user) => (user._id === id ? { ...user, role: role } : user)));
     } catch (e) {
       console.log(e);
